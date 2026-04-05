@@ -1,0 +1,521 @@
+/* =========================================================
+   CONTACT US PAGE SPECIFIC CSS (Prefix: cu-)
+========================================================= */
+:root {
+    --cu-primary: #0B2447;
+    --cu-accent: #19376D;
+    --cu-bg: #f4f7f6;
+    --cu-white: #ffffff;
+    --cu-text-dark: #1e293b;
+    --cu-text-light: #64748b;
+    --cu-border: #e2e8f0;
+    --cu-wa-green: #25D366;
+    --cu-email-blue: #0ea5e9;
+    --cu-gold: #f59e0b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.cu-body {
+    background-color: var(--cu-bg);
+    color: var(--cu-text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- NAVBAR --- */
+.cu-navbar {
+    background: var(--cu-primary);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cu-nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cu-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--cu-white);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.cu-brand img {
+    height: 45px;
+    border-radius: 8px;
+    background: var(--cu-white);
+}
+
+.cu-menu-btn {
+    display: none;
+    color: var(--cu-white);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.cu-nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.cu-chip {
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--cu-white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cu-chip:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.cu-active {
+    background: #A5D7E8 !important;
+    color: var(--cu-primary) !important;
+}
+
+/* --- MAIN WRAPPER & HEADER --- */
+.cu-main-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.cu-page-header {
+    background: linear-gradient(135deg, var(--cu-primary), var(--cu-accent));
+    color: var(--cu-white);
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cu-page-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.cu-page-header p {
+    font-size: 1.1rem;
+    color: #A5D7E8;
+}
+
+/* --- CONTACT LAYOUT --- */
+.cu-contact-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Form Section */
+.cu-form-section {
+    flex: 1;
+    background: var(--cu-white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--cu-border);
+}
+
+.cu-form-section h2 {
+    color: var(--cu-primary);
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+}
+
+.cu-form-group {
+    margin-bottom: 20px;
+}
+
+.cu-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--cu-text-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.cu-form-group input,
+.cu-form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--cu-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    background: #f8fafc;
+}
+
+.cu-form-group input:focus,
+.cu-form-group textarea:focus {
+    border-color: var(--cu-primary);
+    background: var(--cu-white);
+}
+
+.cu-form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.cu-submit-btn {
+    flex: 1;
+    color: var(--cu-white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.cu-btn-wa {
+    background: var(--cu-wa-green);
+}
+
+.cu-btn-wa:hover {
+    background: #128C7E;
+}
+
+.cu-btn-email {
+    background: var(--cu-primary);
+}
+
+.cu-btn-email:hover {
+    background: var(--cu-accent);
+}
+
+/* Info Section */
+.cu-info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cu-info-card {
+    background: var(--cu-white);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--cu-border);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.cu-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.cu-info-item:last-child {
+    margin-bottom: 0;
+}
+
+.cu-info-icon {
+    font-size: 1.5rem;
+    background: #f1f5f9;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.cu-info-text strong {
+    display: block;
+    color: var(--cu-primary);
+    margin-bottom: 5px;
+}
+
+.cu-info-text a {
+    color: var(--cu-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.cu-info-text a:hover {
+    color: var(--cu-primary);
+    text-decoration: underline;
+}
+
+/* Map */
+.cu-map-box {
+    flex-grow: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--cu-border);
+    min-height: 280px;
+}
+
+.cu-map-box iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+/* --- FAQ & SOCIALS --- */
+.cu-faq-section {
+    background: var(--cu-white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--cu-border);
+    margin-bottom: 60px;
+}
+
+.cu-faq-section h2 {
+    color: var(--cu-primary);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.cu-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.cu-faq-item {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--cu-border);
+    transition: 0.3s;
+}
+
+.cu-faq-item:hover {
+    border-color: var(--cu-primary);
+}
+
+.cu-faq-item h3 {
+    color: var(--cu-primary);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.cu-faq-item p {
+    color: var(--cu-text-light);
+    font-size: 0.95rem;
+}
+
+.cu-social-links {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cu-border);
+}
+
+.cu-social-links h3 {
+    color: var(--cu-primary);
+    margin-bottom: 20px;
+}
+
+.cu-social-btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 25px;
+    background: #e2e8f0;
+    color: var(--cu-primary);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.cu-social-btn:hover {
+    background: var(--cu-primary);
+    color: var(--cu-white);
+}
+
+.cu-social-wa {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.cu-social-wa:hover {
+    background: var(--cu-wa-green);
+    color: white;
+}
+
+/* --- FOOTER --- */
+.cu-footer {
+    background: var(--cu-primary);
+    color: var(--cu-white);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cu-footer-links {
+    margin: 20px 0;
+}
+
+.cu-footer-links a {
+    color: #A5D7E8;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.cu-copyright {
+    margin-top: 20px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.cu-developer {
+    margin-top: 5px;
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+/* --- FLOATING WIDGET --- */
+.cu-wa-widget {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: var(--cu-wa-green);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cu-wa-widget:hover {
+    transform: scale(1.1);
+}
+
+.cu-wa-tooltip {
+    position: absolute;
+    left: 75px;
+    background: white;
+    color: var(--cu-text-dark);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.cu-wa-widget:hover .cu-wa-tooltip {
+    opacity: 1;
+}
+
+/* =========================================================
+   📱 STRICT MOBILE RESPONSIVE RULES
+========================================================= */
+@media (max-width: 900px) {
+    .cu-contact-container {
+        flex-direction: column;
+    }
+
+    .cu-map-box {
+        min-height: 300px;
+    }
+
+    .cu-wa-widget {
+        bottom: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .cu-wa-tooltip {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .cu-menu-btn {
+        display: block;
+    }
+
+    .cu-nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--cu-primary);
+        flex-direction: column;
+        padding: 15px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .cu-nav-links.cu-show {
+        display: flex;
+    }
+
+    .cu-chip {
+        text-align: center;
+    }
+
+    .cu-page-header {
+        padding: 40px 15px;
+    }
+
+    .cu-page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .cu-form-section {
+        padding: 25px;
+    }
+
+    .cu-form-actions {
+        flex-direction: column;
+    }
+
+    .cu-info-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        word-break: break-word;
+    }
+
+    .cu-faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cu-social-btn {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+}

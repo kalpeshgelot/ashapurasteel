@@ -1,0 +1,769 @@
+/* =========================================================
+   GLOBAL VARIABLES & RESET
+========================================================= */
+:root {
+    --cat-primary: #0B2447;
+    --cat-accent: #19376D;
+    --cat-gold: #f59e0b;
+    --cat-bg: #f4f7f6;
+    --cat-white: #ffffff;
+    --cat-text-dark: #1e293b;
+    --cat-text-light: #64748b;
+    --cat-border: #e2e8f0;
+    --cat-price: #b91c1c;
+    --cat-wa: #25D366;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.cat-body {
+    background-color: var(--cat-bg);
+    color: var(--cat-text-dark);
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================================
+   HEADER & NAVBAR
+========================================================= */
+.cat-navbar {
+    background: var(--cat-primary);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cat-nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cat-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--cat-white);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.cat-brand img {
+    height: 45px;
+    border-radius: 8px;
+    background: var(--cat-white);
+}
+
+.cat-menu-btn {
+    display: none;
+    color: var(--cat-white);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.cat-nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.cat-chip {
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--cat-white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cat-chip:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.cat-active {
+    background: #A5D7E8 !important;
+    color: var(--cat-primary) !important;
+}
+
+.cat-page-header {
+    background: linear-gradient(135deg, var(--cat-primary), var(--cat-accent));
+    color: var(--cat-white);
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cat-page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.cat-page-header p {
+    font-size: 1.1rem;
+    color: #A5D7E8;
+}
+
+/* =========================================================
+   MAIN LAYOUT & SIDEBAR
+========================================================= */
+.cat-main-layout {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    width: 100%;
+}
+
+.cat-sidebar {
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.cat-filter-box {
+    background: var(--cat-white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--cat-border);
+}
+
+.cat-filter-box h3 {
+    color: var(--cat-primary);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--cat-border);
+    padding-bottom: 10px;
+}
+
+.cat-search-input,
+.cat-sort-select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--cat-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background: #f8fafc;
+    transition: 0.3s;
+}
+
+.cat-search-input:focus,
+.cat-sort-select:focus {
+    border-color: var(--cat-primary);
+    background: var(--cat-white);
+}
+
+.cat-category-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cat-category-list li {
+    padding: 10px 15px;
+    background: #f8fafc;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--cat-text-light);
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.cat-category-list li:hover {
+    background: #e2e8f0;
+    color: var(--cat-primary);
+}
+
+.cat-active-filter {
+    background: var(--cat-primary) !important;
+    color: var(--cat-white) !important;
+    border-color: var(--cat-primary) !important;
+}
+
+/* =========================================================
+   PRODUCT CARDS & GRID
+========================================================= */
+.cat-content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cat-results-info {
+    font-size: 1.1rem;
+    color: var(--cat-text-light);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.cat-results-info span {
+    color: var(--cat-primary);
+    font-weight: bold;
+}
+
+.cat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.cat-prod-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background: var(--cat-white);
+    border: 1px solid var(--cat-border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    transition: 0.3s;
+}
+
+.cat-prod-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--cat-accent);
+}
+
+/* UPDATED: Made image box bigger (250px) and added pointer cursor for zoom feature */
+.cat-img-box {
+    width: 250px;
+    flex-shrink: 0;
+    background: #f8fafc;
+    padding: 15px;
+    border-right: 1px solid var(--cat-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-in;
+    /* Shows the user they can click to zoom */
+}
+
+.cat-img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: transform 0.3s ease;
+}
+
+.cat-img-box:hover img {
+    transform: scale(1.05);
+    /* Slight hover effect before clicking */
+}
+
+.cat-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cat-badge {
+    align-self: flex-start;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.cat-title {
+    font-size: 1.2rem;
+    color: var(--cat-primary);
+    margin-bottom: 10px;
+}
+
+.cat-specs {
+    background: #f8fafc;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    border: 1px dashed var(--cat-border);
+}
+
+.cat-specs p {
+    font-size: 0.9rem;
+    color: var(--cat-text-light);
+    margin-bottom: 4px;
+}
+
+.cat-price {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--cat-price);
+    margin-bottom: 15px;
+}
+
+.cat-action-row {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    align-items: stretch;
+}
+
+.cat-qty-wrapper {
+    display: flex;
+    border: 1px solid var(--cat-border);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #f8fafc;
+    height: 44px;
+}
+
+.cat-qty-btn {
+    background: transparent;
+    border: none;
+    width: 35px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cat-primary);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cat-qty-btn:hover {
+    background: var(--cat-border);
+}
+
+.cat-qty-input {
+    width: 45px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid var(--cat-border);
+    border-right: 1px solid var(--cat-border);
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--cat-text-dark);
+    background: var(--cat-white);
+    outline: none;
+}
+
+.cat-qty-input::-webkit-outer-spin-button,
+.cat-qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cat-qty-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.cat-add-btn {
+    flex-grow: 1;
+    background: var(--cat-accent);
+    color: var(--cat-white);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    height: 44px;
+}
+
+.cat-add-btn:hover {
+    background: var(--cat-primary);
+}
+
+/* =========================================================
+   PAGINATION & FOOTER
+========================================================= */
+.cat-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--cat-border);
+}
+
+.cat-page-btn {
+    padding: 8px 16px;
+    background: var(--cat-white);
+    border: 1px solid var(--cat-border);
+    border-radius: 6px;
+    color: var(--cat-primary);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cat-page-btn:hover {
+    background: #f1f5f9;
+    border-color: var(--cat-primary);
+}
+
+.cat-active-page {
+    background: var(--cat-primary);
+    color: var(--cat-white);
+    border-color: var(--cat-primary);
+    pointer-events: none;
+}
+
+.cat-page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.cat-footer {
+    background: var(--cat-primary);
+    color: var(--cat-white);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: auto;
+}
+
+.cat-footer-links {
+    margin: 15px 0;
+}
+
+.cat-footer-links a {
+    color: #A5D7E8;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.cat-copyright {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   FLOATING CART
+========================================================= */
+.cat-floating-cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--cat-wa);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cat-floating-cart:hover {
+    transform: scale(1.05);
+}
+
+/* =========================================================
+   NEW FEATURE 1: IMAGE ZOOM MODAL CSS
+========================================================= */
+.cat-zoom-overlay {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cat-zoom-overlay.show {
+    opacity: 1;
+}
+
+.cat-zoom-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    background: white;
+    padding: 20px;
+}
+
+.cat-zoom-overlay.show .cat-zoom-content {
+    transform: scale(1);
+}
+
+.cat-zoom-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* =========================================================
+   NEW FEATURE 2: CART REVIEW MODAL CSS
+========================================================= */
+.cat-cart-overlay {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+}
+
+.cat-cart-modal {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cat-cart-modal h2 {
+    color: var(--cat-primary);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--cat-border);
+    padding-bottom: 10px;
+}
+
+.cat-cart-items-list {
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.cat-cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--cat-border);
+    font-size: 1.1rem;
+}
+
+.cat-cart-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--cat-text-light);
+}
+
+.cat-cart-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.cat-btn-clear {
+    flex: 1;
+    padding: 12px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cat-btn-whatsapp {
+    flex: 2;
+    padding: 12px;
+    background: var(--cat-wa);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#backToTopBtn {
+  /* Positioning */
+  position: fixed;
+  bottom: 30px; /* થોડું ઉપર રાખ્યું છે */
+  right: 30px;
+  z-index: 999; /* બધાની ઉપર દેખાય તે માટે */
+
+  /* Sizing & Shape */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* ગોળાકાર */
+  border: none;
+  outline: none;
+
+  /* Modern Aesthetics */
+  background-image: linear-gradient(135deg, #540707 0%, #301ad6 100%); /* ડાર્ક ગ્રેડિયન્ટ */
+  color: #ffffff; /* આઇકનનો રંગ */
+  cursor: pointer;
+  
+  /* Centering the icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Premium Shadow */
+  box-shadow: 0 4px 15px rgba(0, 33, 246, 0.4);
+
+  /* --- Smooth Entrance Animation --- */
+  /* શરૂઆતમાં છુપાયેલું અને નીચે તરફ */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px); 
+  
+  /* બધી પ્રોપર્ટી માટે સ્મૂથ ટ્રાન્ઝિશન */
+  transition: all 0.4s ease-in-out;
+}
+
+/* જ્યારે JavaScript આ ક્લાસ ઉમેરશે ત્યારે બટન દેખાશે */
+#backToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* તેની મૂળ જગ્યાએ આવી જશે */
+}
+
+/* Hover effect */
+#backToTopBtn:hover {
+  background-image: linear-gradient(135deg, #636363 0%, #222222 100%); /* થોડું ઝાંખું */
+  box-shadow: 0 6px 20px  rgba(2, 79, 244, 0.6); /* શેડો વધારવી */
+  transform: translateY(-3px); /* ઉપર તરતું હોય તેવું લાગે */
+}
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+@media (max-width: 900px) {
+    .cat-main-layout {
+        flex-direction: column;
+    }
+
+    .cat-sidebar {
+        flex: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .cat-filter-box {
+        flex: 1;
+        min-width: 250px;
+        padding: 15px;
+    }
+
+    .cat-category-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .cat-category-list li {
+        flex: 1;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .cat-menu-btn {
+        display: block;
+    }
+
+    .cat-nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--cat-primary);
+        flex-direction: column;
+        padding: 15px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .cat-nav-links.cat-show {
+        display: flex;
+    }
+
+    .cat-chip {
+        text-align: center;
+    }
+
+    .cat-sidebar {
+        flex-direction: column;
+    }
+
+    .cat-page-header h1 {
+        font-size: 2rem;
+    }
+
+    .cat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cat-prod-card {
+        flex-direction: column;
+    }
+
+    /* UPDATED: Mobile image box sizing */
+    .cat-img-box {
+        width: 100%;
+        height: 250px;
+        /* Made bigger for mobile too */
+        border-right: none;
+        border-bottom: 1px solid var(--cat-border);
+    }
+
+    .cat-action-row {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .cat-qty-wrapper {
+        flex: 0 0 auto;
+    }
+
+    .cat-qty-btn {
+        width: 30px;
+    }
+
+    .cat-qty-input {
+        width: 35px;
+    }
+
+    .cat-add-btn {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}

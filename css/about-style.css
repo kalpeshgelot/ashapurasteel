@@ -1,0 +1,482 @@
+/* =========================================================
+   ABOUT US PAGE SPECIFIC CSS (Prefix: au-)
+========================================================= */
+
+:root {
+    --au-primary: #0B2447;
+    --au-accent: #19376D;
+    --au-gold: #f59e0b;
+    --au-bg: #f8fafc;
+    --au-white: #ffffff;
+    --au-text-dark: #1e293b;
+    --au-text-light: #64748b;
+    --au-border: #e2e8f0;
+    --price: #b91c1c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.au-body {
+    background-color: var(--au-bg);
+    color: var(--au-text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- AU NAVBAR --- */
+.au-navbar {
+    background: var(--au-primary);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.au-nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.au-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--au-white);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.au-brand img {
+    height: 45px;
+    border-radius: 8px;
+    background: var(--au-white);
+}
+
+.au-menu-btn {
+    display: none;
+    color: var(--au-white);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.au-nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.au-chip {
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--au-white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.au-chip:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.au-active {
+    background: var(--au-gold) !important;
+    color: var(--au-primary) !important;
+}
+
+/* --- MAIN WRAPPER --- */
+.au-main-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* --- HERO SECTION --- */
+.au-hero {
+    background: linear-gradient(rgba(11, 36, 71, 0.8), rgba(25, 55, 109, 0.8)), url('../product/acrylic1.png ') center/cover;
+    border-radius: 15px;
+    padding: 80px 20px;
+    text-align: center;
+    color: var(--au-white);
+    margin-bottom: 50px;
+    box-shadow: 0 10px 20px rgba(135, 28, 28, 0.1);
+}
+
+.au-hero-title {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.au-hero-subtitle {
+    font-size: 1.2rem;
+    color: #e2e8f0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- COMPANY OVERVIEW & GST --- */
+.au-company-overview {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+    background: var(--au-white);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid var(--au-border);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.au-overview-text {
+    flex: 1.5;
+}
+
+.au-overview-text h2 {
+    color: var(--au-primary);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.au-overview-text p {
+    margin-bottom: 15px;
+    color: var(--au-text-light);
+    font-size: 1.05rem;
+}
+
+.au-official-details {
+    flex: 1;
+    background: var(--au-bg);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px dashed var(--au-border);
+}
+
+.au-official-details h3 {
+    color: var(--au-primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--au-gold);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.au-details-list {
+    list-style: none;
+}
+
+.au-details-list li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: var(--au-text-dark);
+}
+
+.au-highlight {
+    background: #dcfce7;
+    color: #166534;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+/* --- OWNER SECTION --- */
+.au-section-heading {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--au-primary);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.au-owner-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: var(--au-white);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid var(--au-border);
+    margin-bottom: 60px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.au-owner-image {
+    flex: 0 0 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--au-bg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: var(--au-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.au-owner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.au-owner-info {
+    flex: 1;
+}
+
+.au-owner-info h3 {
+    font-size: 2.2rem;
+    color: var(--au-primary);
+    margin-bottom: 5px;
+}
+
+.au-designation {
+    display: inline-block;
+    background: var(--au-gold);
+    color: var(--au-white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.au-owner-quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--au-text-light);
+    border-left: 4px solid var(--au-primary);
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.au-owner-contact {
+    display: flex;
+    gap: 15px;
+}
+
+.au-btn-primary {
+    background: var(--au-primary);
+    color: var(--au-white);
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.au-btn-primary:hover {
+    background: var(--au-accent);
+}
+
+.au-btn-secondary {
+    background: var(--au-white);
+    color: var(--au-primary);
+    border: 2px solid var(--au-primary);
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.au-btn-secondary:hover {
+    background: var(--au-primary);
+    color: var(--au-white);
+}
+
+/* --- MISSION & VISION --- */
+.au-mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.au-mv-card {
+    background: var(--au-white);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--au-border);
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.au-mv-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--au-gold);
+}
+
+.au-mv-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.au-mv-card h3 {
+    color: var(--au-primary);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* --- GALLERY --- */
+.au-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.au-gallery-item {
+    background: var(--au-white);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid var(--au-border);
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.au-gallery-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.show-more-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.show-more-link {
+  background: var(--price);
+  color: white;
+  padding: 12px 30px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* --- FOOTER --- */
+.au-footer {
+    background: var(--au-primary);
+    color: var(--au-white);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.au-footer-inner h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.au-footer-links {
+    margin: 20px 0;
+}
+
+.au-footer-links a {
+    color: #A5D7E8;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.au-copyright {
+    margin-top: 20px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.au-developer {
+    margin-top: 5px;
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+/* =========================================================
+   📱 STRICT MOBILE RESPONSIVE RULES 
+========================================================= */
+@media (max-width: 900px) {
+    .au-company-overview {
+        flex-direction: column;
+    }
+
+    .au-owner-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .au-owner-quote {
+        border-left: none;
+        border-top: 4px solid var(--au-primary);
+        padding-top: 15px;
+        padding-left: 0;
+    }
+
+    .au-owner-contact {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .au-menu-btn {
+        display: block;
+    }
+
+    .au-nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--au-primary);
+        flex-direction: column;
+        padding: 15px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .au-nav-links.au-show {
+        display: flex;
+    }
+
+    .au-chip {
+        text-align: center;
+    }
+
+    .au-hero {
+        padding: 50px 15px;
+    }
+
+    .au-hero-title {
+        font-size: 2rem;
+    }
+
+    .au-company-overview,
+    .au-owner-card {
+        padding: 20px;
+    }
+
+    .au-owner-image {
+        flex: 0 0 180px;
+        height: 180px;
+    }
+
+    .au-owner-contact {
+        flex-direction: column;
+    }
+
+    .au-mission-vision {
+        grid-template-columns: 1fr;
+    }
+}

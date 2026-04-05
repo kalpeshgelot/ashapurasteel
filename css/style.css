@@ -1,0 +1,774 @@
+/* =========================================================
+   ગ્લોબલ સેટિંગ્સ (આખી વેબસાઇટ માટે સામાન્ય કલર્સ)
+========================================================= */
+:root {
+  --primary: #0B2447;
+  --accent: #19376D;
+  --price: #b91c1c;
+  --bg-color: #f1f5f9;
+  --white: #ffffff;
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --border: #e2e8f0;
+  --whatsapp: #25D366;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html,
+body {
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* =========================================================
+   ૧. હેડર અને નેવિગેશન બાર
+========================================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--primary);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.header-brand img {
+  height: 42px;
+  width: 42px;
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.header-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-item {
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  background: #A5D7E8;
+  color: var(--primary);
+}
+
+.mobile-menu-icon {
+  display: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* =========================================================
+   ૨. મુખ્ય હીરો સ્લાઇડર (ઉપરનું)
+========================================================= */
+.hero-section {
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.hero-slider-wrap {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-slider-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-out;
+}
+
+.hero-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  display: flex;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--white);
+}
+
+.hero-slide-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-slide-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.hero-slide-content p {
+  font-size: 1.1rem;
+  color: #e2e8f0;
+  margin-bottom: 25px;
+}
+
+.hero-tag {
+  align-self: flex-start;
+  background: #f59e0b;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-btn {
+  align-self: flex-start;
+  background: var(--white);
+  color: var(--primary);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.hero-slide-image {
+  flex: 1;
+  background: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-slide-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+/* સ્લાઇડર બટન્સ (તીર) */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  border: none;
+  font-size: 1.5rem;
+  padding: 15px 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.arrow-left {
+  left: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.arrow-right {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+/* =========================================================
+   ૩. સર્ચ બાર અને કેટેગરી બટન
+========================================================= */
+.search-category-section {
+  max-width: 1400px;
+  margin: 10px auto 25px auto;
+  padding: 0 20px;
+}
+
+.search-container {
+  background: var(--white);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 0 0 8px 8px;
+  z-index: 9999;
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestions-list div {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* કેટેગરી બટન્સ */
+.category-buttons-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cat-btn {
+  background: var(--white);
+  color: var(--text-dark);
+  border: 2px solid var(--border);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cat-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.cat-btn.active {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+/* =========================================================
+   ૪. પ્રોડક્ટ ગ્રીડ (પ્રોડક્ટ કાર્ડ્સ)
+========================================================= */
+.product-main-area {
+  padding-bottom: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.prod-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.prod-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent);
+}
+
+.prod-image {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  cursor: pointer;
+  padding: 10px;
+  background: #f8fafc;
+  border-bottom: 1px solid var(--border);
+}
+
+.prod-details {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.prod-category {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.prod-title {
+  font-size: 1.15rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.prod-price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--price);
+  margin-bottom: 10px;
+}
+
+.prod-action {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.prod-qty {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qty-input {
+  width: 80px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.prod-cart-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.prod-cart-btn:hover {
+  background: var(--primary);
+}
+
+/* =========================================================
+   ૫. પ્રીમિયમ વિડિઓ સેક્શન
+========================================================= */
+.video-promo-section {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.video-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.video-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.video-contact-link {
+  padding: 12px 30px;
+  background: var(--whatsapp);
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+/* =========================================================
+   ૬. નીચેનું સ્લાઇડર અને ઇમેજ (આ મોબાઇલમાં પરફેક્ટ દેખાશે)
+========================================================= */
+.bottom-promo-section {
+  display: flex;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ડાબી બાજુનું સ્લાઇડર */
+.bottom-slider-wrap {
+  flex: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-slider-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.bottom-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  display: flex;
+  background: var(--primary);
+  color: var(--white);
+}
+
+.bottom-slide-info {
+  flex: 1;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bottom-slide-info h2 {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.bottom-tag {
+  background: var(--price);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.bottom-slide-pic {
+  flex: 1;
+  background: var(--white);
+}
+
+.bottom-slide-pic img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+/* નીચેના સ્લાઇડર માટે નાના તીર બટન */
+.bottom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--white);
+  border: none;
+  font-size: 1rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* જમણી બાજુની ઇમેજ */
+.bottom-static-wrap {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-static-wrap img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.bottom-static-tag {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: var(--price);
+  color: var(--white);
+  padding: 8px 15px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.show-more-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.show-more-link {
+  background: var(--price);
+  color: var(--white);
+  padding: 12px 30px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* =========================================================
+   ૭. ફૂટર સેક્શન
+========================================================= */
+.site-footer {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: auto;
+}
+
+.footer-container h2 {
+  margin-bottom: 10px;
+}
+
+.footer-nav {
+  margin: 20px 0;
+}
+
+.footer-nav a {
+  color: #A5D7E8;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-socials {
+  margin: 20px 0;
+}
+
+.social-link {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-rights {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.footer-dev {
+  color: #5a6477;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+/* =========================================================
+   ૮. મોડલ (ઇમેજ ઝૂમ) અને ફ્લોટિંગ કાર્ટ
+========================================================= */
+.zoom-overlay {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.zoomed-pic {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.close-zoom {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: var(--white);
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.cart-floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--whatsapp);
+  color: var(--white);
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  z-index: 1000;
+  display: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================
+   📱 મોબાઈલ માટે ખાસ કોડ (આનાથી નીચેનું સ્લાઇડર પરફેક્ટ દેખાશે)
+========================================================= */
+@media (max-width: 768px) {
+
+  /* હેડર મેનુ */
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    background: var(--primary);
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .header-nav.active {
+    display: flex;
+  }
+
+  /* કેટેગરી બટન્સ સ્ક્રોલ થાય તે માટે */
+  .category-buttons-container {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .cat-btn {
+    white-space: nowrap;
+  }
+
+  /* ઉપરનું સ્લાઇડર */
+  .hero-slide {
+    flex-direction: column-reverse;
+  }
+
+  .hero-slide-content {
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-slide-image img {
+    height: 200px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  /* વિડિઓ */
+  .video-wrapper {
+    height: 220px;
+  }
+
+  .video-content h2 {
+    font-size: 1.5rem;
+  }
+
+  /* 🔴 અહી નીચેના સ્લાઇડરનું પરફેક્ટ મોબાઈલ સેટિંગ છે 🔴 */
+  .bottom-promo-section {
+    display: flex;
+    flex-direction: row;
+    /* ફરજીયાત બાજુ-બાજુમાં જ રહેશે */
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  /* બંને બોક્સને બરાબર ૫૦% જગ્યા આપી છે અને ફિક્સ 180px ઉંચાઈ આપી છે */
+  .bottom-slider-wrap,
+  .bottom-static-wrap {
+    width: 50%;
+    height: 180px;
+  }
+
+  /* ઇમેજ ખાનાની અંદર જ ફિટ રહે તે માટે */
+  .bottom-slide-pic img,
+  .bottom-static-wrap img {
+    height: 180px;
+    object-fit: cover;
+  }
+
+  /* મોબાઈલમાં સ્લાઇડરનું લખાણ છુપાવી દીધું છે જેથી ઇમેજ મોટી દેખાય અને ખરાબ ન લાગે */
+  .bottom-slide-info {
+    display: none;
+  }
+
+  /* ઓફર ટેગની સાઈઝ નાની કરી છે */
+  .bottom-static-tag {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+    bottom: 5px;
+    left: 5px;
+  }
+
+  /* સ્લાઇડરના તીર બટન નાના કર્યા છે */
+  .bottom-arrow {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+}

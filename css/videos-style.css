@@ -1,0 +1,379 @@
+/* =========================================================
+   VIDEOS PAGE SPECIFIC CSS (Prefix: vid-)
+========================================================= */
+:root {
+    --vid-primary: #0B2447;
+    --vid-accent: #19376D;
+    --vid-bg: #f4f7f6;
+    --vid-white: #ffffff;
+    --vid-text-dark: #1e293b;
+    --vid-text-light: #64748b;
+    --vid-border: #e2e8f0;
+    --vid-wa-green: #25D366;
+    --vid-price: #b91c1c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.vid-body {
+    background-color: var(--vid-bg);
+    color: var(--vid-text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- NAVBAR --- */
+.vid-navbar {
+    background: var(--vid-primary);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vid-nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vid-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--vid-white);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.vid-brand img {
+    height: 45px;
+    border-radius: 8px;
+    background: var(--vid-white);
+}
+
+.vid-menu-btn {
+    display: none;
+    color: var(--vid-white);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.vid-nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.vid-chip {
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--vid-white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.vid-chip:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.vid-active {
+    background: #A5D7E8 !important;
+    color: var(--vid-primary) !important;
+}
+
+/* --- MAIN WRAPPER & HEADER --- */
+.vid-main-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.vid-page-header {
+    background: linear-gradient(135deg, var(--vid-primary), var(--vid-accent));
+    color: var(--vid-white);
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.vid-page-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.vid-page-header p {
+    font-size: 1.1rem;
+    color: #A5D7E8;
+}
+
+/* --- VIDEO GALLERY LAYOUT --- */
+.vid-gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Video Card (Desktop: Side-by-Side) */
+.vid-card {
+    display: flex;
+    background: var(--vid-white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--vid-border);
+    transition: transform 0.3s ease;
+}
+
+.vid-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--vid-accent);
+}
+
+/* Left Side: Player */
+.vid-player-box {
+    flex: 1;
+    background: #000;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--vid-border);
+}
+
+.vid-element {
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+/* Right Side: Details */
+.vid-info-box {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vid-category-tag {
+    align-self: flex-start;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.vid-title {
+    color: var(--vid-primary);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.vid-desc {
+    color: var(--vid-text-light);
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* Specifications inside Card */
+.vid-specs {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px dashed var(--vid-border);
+    margin-bottom: 25px;
+}
+
+.vid-specs h3 {
+    color: var(--vid-primary);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.vid-specs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vid-specs li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: var(--vid-text-dark);
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 5px;
+}
+
+.vid-specs li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Action Area */
+.vid-action-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--vid-border);
+}
+
+.vid-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--vid-price);
+}
+
+.vid-btn-wa {
+    background: var(--vid-wa-green);
+    color: var(--vid-white);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+.vid-btn-wa:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+/* --- FOOTER --- */
+.vid-footer {
+    background: var(--vid-primary);
+    color: var(--vid-white);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.vid-footer-links {
+    margin: 20px 0;
+}
+
+.vid-footer-links a {
+    color: #A5D7E8;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.vid-copyright {
+    margin-top: 20px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.vid-developer {
+    margin-top: 5px;
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+/* =========================================================
+   📱 STRICT MOBILE RESPONSIVE RULES
+========================================================= */
+@media (max-width: 900px) {
+    .vid-card {
+        flex-direction: column;
+    }
+
+    /* Forces Video on top, Text on bottom */
+    .vid-player-box {
+        border-right: none;
+        border-bottom: 1px solid var(--vid-border);
+        min-height: 250px;
+    }
+
+    .vid-element {
+        max-height: 300px;
+    }
+
+    .vid-info-box {
+        padding: 25px;
+    }
+
+    .vid-action-area {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .vid-btn-wa {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .vid-menu-btn {
+        display: block;
+    }
+
+    .vid-nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--vid-primary);
+        flex-direction: column;
+        padding: 15px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .vid-nav-links.vid-show {
+        display: flex;
+    }
+
+    .vid-chip {
+        text-align: center;
+    }
+
+    .vid-page-header {
+        padding: 40px 15px;
+    }
+
+    .vid-page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .vid-title {
+        font-size: 1.6rem;
+    }
+
+    .vid-info-box {
+        padding: 20px 15px;
+    }
+
+    .vid-player-box {
+        min-height: 220px;
+    }
+
+    .vid-element {
+        max-height: 250px;
+    }
+}
