@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="google-site-verification" content="aJMxWfmfpecnUaHt9J3BvRkFE6cZUWMG9geEDK4HWYE" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Our Products - Ashapura Steel Ahmedabad</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta name="description"
+        content="Browse the complete catalog of Ashapura Steel. Premium metal products, gate fittings, and acrylic pillars.">
+
+    <link rel="stylesheet" href="css/product-style.css" />
+    <script src="js/product-script.js" defer></script>
+</head>
+
+<body class="cat-body">
+
+    <header class="cat-navbar">
+        <div class="cat-nav-container">
+            <div class="cat-brand">
+                <img src="logo.png" alt="Logo"><span>Ashapura Steel</span>
+            </div>
+            <span class="cat-menu-btn" id="catMobileMenuBtn">☰</span>
+            <nav class="cat-nav-links" id="catNavLinks">
+                <a class="cat-chip" href="index.html">🏠 Home</a>
+                <a class="cat-chip" href="about.html">🏢 About Us</a>
+                <a class="cat-chip cat-active" href="video.html">🎥 Videos</a>
+                <a class="cat-chip" href="contactus.html">📞 Contact</a>
+                <a class="cat-chip" target="_blank" href="https://wa.me/916359063984">💬 WhatsApp</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cat-page-header">
+        <h1>Our Premium Products</h1>
+        <p>Explore our complete catalog of industrial steel, gate fittings, and decorative acrylics.</p>
+    </div>
+
+    <main class="cat-main-layout">
+
+        <aside class="cat-sidebar">
+            <div class="cat-filter-box">
+                <h3>🔍 Search Catalog</h3>
+                <input type="text" id="catSearchInput" class="cat-search-input" placeholder="Search by name...">
+            </div>
+
+            <div class="cat-filter-box">
+                <h3>📁 Categories</h3>
+                <ul class="cat-category-list" id="catCategoryList">
+                    <li class="cat-active-filter" data-filter="All">All Products</li>
+                    <li data-filter="Steel Balls">Steel Balls</li>
+                    <li data-filter="SS Gate Fitting">SS Gate Fitting</li>
+                    <li data-filter="SS Pipe Fitting">SS Pipe Fitting</li>
+                    <li data-filter="Steel Base">Steel Base</li>
+                    <li data-filter="Acrylic">Acrylic Products</li>
+                </ul>
+            </div>
+
+            <div class="cat-filter-box">
+                <h3>↕️ Sort By Price</h3>
+                <select id="catSortSelect" class="cat-sort-select">
+                    <option value="default">Default</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                </select>
+            </div>
+        </aside>
+
+        <section class="cat-content-area">
+
+            <div class="cat-results-info">
+                Showing <span id="catShowingText">0</span> products
+            </div>
+
+            <div class="cat-grid" id="catProductGrid">
+
+                <article class="cat-prod-card" data-category="Steel Balls" data-price="10">
+                    <div class="cat-img-box"><img src="product/1.5inchball.png" alt="SS Ball"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">SS Balls</span>
+                        <h3 class="cat-title">Hollow Balls</h3>
+                        <div class="cat-specs">
+                            <p>• Size: 1, 1.25, 1.5 & 2 Inch</p>
+                            <p>• Material: SS 304 & 202</p>
+                            <p>• Hole Size: According to your needs </p>
+                        </div>
+                        <p class="cat-price">₹ 8 to 10 / Piece</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-prod-card" data-category="SS Gate Fitting" data-price="200">
+                    <div class="cat-img-box"><img src="product/injis.png" alt="SS Injis"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">SS Gate Fitting</span>
+                        <h3 class="cat-title">SS Injis</h3>
+                        <div class="cat-specs">
+                            <p>• Size: 1, 1.25, 1.5 Inch</p>
+                            <p>• Material: SS 304 & 202</p>
+                        </div>
+                        <p class="cat-price">₹ 200 / KGS</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-prod-card" data-category="SS Gate Fitting" data-price="50">
+                    <div class="cat-img-box"><img src="product/trishul.png" alt="SS Trishul"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">SS Gate Fitting</span>
+                        <h3 class="cat-title">SS Trishul</h3>
+                        <div class="cat-specs">
+                            <p>• Height: 6, 8, 10, 12 Inch</p>
+                            <p>• Material: SS 304 & 202</p>
+                        </div>
+                        <p class="cat-price">₹ 50 / Piece</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="cat-prod-card" data-category="Steel Balls" data-price="10">
+                    <div class="cat-img-box"><img src="product/1.5inchball.png" alt="SS Ball"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">SS Balls</span>
+                        <h3 class="cat-title">Hollow Balls</h3>
+                        <div class="cat-specs">
+                            <p>• Size: 1, 1.25, 1.5 & 2 Inch</p>
+                            <p>• Material: SS 304 & 202</p>
+                            <p>• Hole Size: According to your needs </p>
+                        </div>
+                        <p class="cat-price">₹ 8 to 10 / Piece</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-prod-card" data-category="SS Gate Fitting" data-price="200">
+                    <div class="cat-img-box"><img src="product/injis.png" alt="SS Injis"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">SS Gate Fitting</span>
+                        <h3 class="cat-title">SS Injis</h3>
+                        <div class="cat-specs">
+                            <p>• Size: 1, 1.25, 1.5 Inch</p>
+                            <p>• Material: SS 304 & 202</p>
+                        </div>
+                        <p class="cat-price">₹ 200 / KGS</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-prod-card" data-category="SS Gate Fitting" data-price="50">
+                    <div class="cat-img-box"><img src="product/trishul.png" alt="SS Trishul"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">SS Gate Fitting</span>
+                        <h3 class="cat-title">SS Trishul</h3>
+                        <div class="cat-specs">
+                            <p>• Height: 6, 8, 10, 12 Inch</p>
+                            <p>• Material: SS 304 & 202</p>
+                        </div>
+                        <p class="cat-price">₹ 50 / Piece</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="cat-prod-card" data-category="Steel Balls" data-price="10">
+                    <div class="cat-img-box"><img src="product/1.5inchball.png" alt="SS Ball"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">SS Balls</span>
+                        <h3 class="cat-title">Hollow Balls</h3>
+                        <div class="cat-specs">
+                            <p>• Size: 1, 1.25, 1.5 & 2 Inch</p>
+                            <p>• Material: SS 304 & 202</p>
+                            <p>• Hole Size: According to your needs </p>
+                        </div>
+                        <p class="cat-price">₹ 8 to 10 / Piece</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-prod-card" data-category="SS Gate Fitting" data-price="200">
+                    <div class="cat-img-box"><img src="product/injis.png" alt="SS Injis"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">SS Gate Fitting</span>
+                        <h3 class="cat-title">SS Injis</h3>
+                        <div class="cat-specs">
+                            <p>• Size: 1, 1.25, 1.5 Inch</p>
+                            <p>• Material: SS 304 & 202</p>
+                        </div>
+                        <p class="cat-price">₹ 200 / KGS</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-prod-card" data-category="SS Gate Fitting" data-price="50">
+                    <div class="cat-img-box"><img src="product/trishul.png" alt="SS Trishul"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">SS Gate Fitting</span>
+                        <h3 class="cat-title">SS Trishul</h3>
+                        <div class="cat-specs">
+                            <p>• Height: 6, 8, 10, 12 Inch</p>
+                            <p>• Material: SS 304 & 202</p>
+                        </div>
+                        <p class="cat-price">₹ 50 / Piece</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-prod-card" data-category="SS Gate Fitting" data-price="30">
+                    <div class="cat-img-box"><img src="product/bhala.png" alt="SS Bhala"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">SS Gate Fitting</span>
+                        <h3 class="cat-title">SS Bhala 5 Inch</h3>
+                        <div class="cat-specs">
+                            <p>• Size: 5 Inch</p>
+                            <p>• Sharp Tip Design</p>
+                        </div>
+                        <p class="cat-price">₹ 30 / Piece</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-prod-card" data-category="SS Pipe Fitting" data-price="45">
+                    <div class="cat-img-box"><img src="product/long band.png" alt="SS Elbow"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">SS Pipe Fitting</span>
+                        <h3 class="cat-title">SS All Size Elbow</h3>
+                        <div class="cat-specs">
+                            <p>• Angle: 90 Degree</p>
+                            <p>• Seamless Joint</p>
+                        </div>
+                        <p class="cat-price">₹ 45 / Piece</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-prod-card" data-category="Steel Base" data-price="8">
+                    <div class="cat-img-box"><img src="product/ball base.png" alt="SS Ball base"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">Steel Base</span>
+                        <h3 class="cat-title">SS Base 1 To 3 Inch</h3>
+                        <div class="cat-specs">
+                            <p>• Sizes: 1", 2", 3"</p>
+                            <p>• Flat Bottom</p>
+                        </div>
+                        <p class="cat-price">₹ 8 / Piece</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-prod-card" data-category="Steel Base" data-price="5">
+                    <div class="cat-img-box"><img src="product/1.5x1.5 thali.png" alt="SS Thali base"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">Steel Base</span>
+                        <h3 class="cat-title">SS 1.5X1.5 Thali base</h3>
+                        <div class="cat-specs">
+                            <p>• Dimension: 1.5 x 1.5</p>
+                            <p>• Plate Style</p>
+                        </div>
+                        <p class="cat-price">₹ 5 / Piece</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-prod-card" data-category="Steel Balls" data-price="10">
+                    <div class="cat-img-box"><img src="product/hollow ball.png" alt="SS Balls"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">Steel Balls</span>
+                        <h3 class="cat-title">SS Balls 40mm</h3>
+                        <div class="cat-specs">
+                            <p>• Type: Hollow Ball</p>
+                            <p>• Dia: 40mm</p>
+                        </div>
+                        <p class="cat-price">₹ 10 / Piece</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-prod-card" data-category="Acrylic" data-price="850">
+                    <div class="cat-img-box"><img src="product/acrylic1.png" alt="Acrylic Pillar"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">Acrylic</span>
+                        <h3 class="cat-title">Clear Acrylic Pillar</h3>
+                        <div class="cat-specs">
+                            <p>• Crystal Clear Quality</p>
+                            <p>• High Durability</p>
+                        </div>
+                        <p class="cat-price">₹ 850 / Piece</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cat-prod-card" data-category="Acrylic" data-price="150">
+                    <div class="cat-img-box"><img src="product/colour ball.png" alt="Colour Ball"></div>
+                    <div class="cat-details">
+                        <span class="cat-badge">Acrylic</span>
+                        <h3 class="cat-title">Colour Cotin Ball</h3>
+                        <div class="cat-specs">
+                            <p>• Multi-color Options</p>
+                            <p>• Decorative Use</p>
+                        </div>
+                        <p class="cat-price">₹ 150 / Piece</p>
+                        <div class="cat-action-row">
+                            <div class="cat-qty-wrapper">
+                                <button class="cat-qty-btn" onclick="updateQty(this, -1)">-</button>
+                                <input type="number" class="cat-qty-input" value="1" min="1"
+                                    onchange="validateQty(this)">
+                                <button class="cat-qty-btn" onclick="updateQty(this, 1)">+</button>
+                            </div>
+                            <button class="cat-add-btn" onclick="addToCart(this)">🛒 Add</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="cat-pagination" id="catPagination"></div>
+
+        </section>
+    </main>
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+    <footer class="cat-footer">
+        <div class="cat-footer-inner">
+            <h2>Ashapura Steel</h2>
+            <p>Your trusted partner for premium metal and Hardware products.</p>
+            <div class="cat-footer-links">
+                <a href="index.html">🏠 Home</a> •
+                <a href="about.html">🏢 About Us</a> •
+                <a href="product.html">📦 Products</a> •
+                <a href="contactus.html">📞 Contact Us</a>
+            </div>
+            <p class="cat-copyright">© 2018-2026 Ashapura Steel ⚡ All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="catFloatingCart" class="cat-floating-cart" onclick="openCartReview()">
+        🛒 View Cart (<span id="catCartCount">0</span>)
+    </div>
+
+    <div id="imageZoomModal" class="cat-zoom-overlay" onclick="closeImageModal()">
+        <span class="cat-zoom-close">&times;</span>
+        <img class="cat-zoom-content" id="zoomedImage">
+    </div>
+
+    <div id="cartReviewModal" class="cat-cart-overlay">
+        <div class="cat-cart-modal">
+            <span class="cat-cart-close" onclick="closeCartReview()">&times;</span>
+            <h2>🛒 Your Shopping Cart</h2>
+            <div id="cartItemsList" class="cat-cart-items-list">
+            </div>
+            <div class="cat-cart-actions">
+                <button class="cat-btn-clear" onclick="clearCart()">🗑️ Clear Cart</button>
+                <button class="cat-btn-whatsapp" onclick="sendCartToWhatsApp()">📱 Send to WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

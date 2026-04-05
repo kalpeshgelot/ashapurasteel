@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="google-site-verification" content="aJMxWfmfpecnUaHt9J3BvRkFE6cZUWMG9geEDK4HWYE" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Contact Us - Ashapura Steel Ahmedabad</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta name="description"
+        content="Get in touch with Ashapura Steel in Ahmedabad for premium metal products, custom welding, and acrylic pillars.">
+
+    <link rel="stylesheet" href="css/contact-style.css" />
+    <script src="js/contact-script.js" defer></script>
+</head>
+
+<body class="cu-body">
+
+    <header class="cu-navbar">
+        <div class="cu-nav-container">
+            <div class="cu-brand">
+                <img src="logo.png" alt="Logo"><span>Ashapura Steel</span>
+            </div>
+            <span class="cu-menu-btn" id="cuMobileMenuBtn">☰</span>
+            <nav class="cu-nav-links" id="cuNavLinks">
+                <a class="cu-chip" href="index.html">🏠 Home</a>
+                <a class="cu-chip" href="about.html">🏢 About Us</a>
+                <a class="cu-chip cu-active" href="contactus.html">📞 Contact</a>
+                <a class="cu-chip" target="_blank" href="https://wa.me/916359063984">💬 WhatsApp</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cu-main-wrapper">
+
+        <div class="cu-page-header">
+            <h1>Get In Touch</h1>
+            <p>Have a question, need a custom order, or require a quotation? We are here to help!</p>
+        </div>
+
+        <div class="cu-contact-container">
+
+            <div class="cu-form-section">
+                <h2>Send Us a Message</h2>
+                <p style="color: var(--cu-text-light); margin-bottom: 20px;">Fill out the form below and we will get
+                    back to you shortly.</p>
+
+                <form id="contactForm" onsubmit="event.preventDefault();">
+                    <div class="cu-form-group">
+                        <label for="cuName">Your Name *</label>
+                        <input type="text" id="cuName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="cu-form-group">
+                        <label for="cuCompany">Company / Shop Name </label>
+                        <input type="text" id="cuCompany" placeholder="Enter your business name">
+                    </div>
+                    <div class="cu-form-group">
+                        <label for="cuPhone">Phone Number *</label>
+                        <input type="tel" id="cuPhone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="cu-form-group">
+                        <label for="cuSubject">Requirement / Subject *</label>
+                        <input type="text" id="cuSubject" placeholder="E.g., Bulk Order for Steel Balls" required>
+                    </div>
+                    <div class="cu-form-group">
+                        <label for="cuMessage">Message *</label>
+                        <textarea id="cuMessage" rows="4" placeholder="Write your exact requirements here..."
+                            required></textarea>
+                    </div>
+
+                    <div class="cu-form-actions">
+                        <button type="button" class="cu-submit-btn cu-btn-wa" onclick="sendFormToWhatsApp()">💬 Send via
+                            WhatsApp</button>
+                        <button type="button" class="cu-submit-btn cu-btn-email" onclick="sendFormToEmail()">✉️ Send via
+                            Email</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="cu-info-section">
+
+                <div class="cu-info-card">
+                    <div class="cu-info-item">
+                        <div class="cu-info-icon">📍</div>
+                        <div class="cu-info-text">
+                            <strong>Visit Our Factory/Store</strong>
+                            Gopal Estate, 37/11, nr. Harshad Chamber, opp. VALLABH NAGAR, G I D C Industrial Area,
+                            Odhav, Ahmedabad, Gujarat 382415
+                        </div>
+                    </div>
+                    <div class="cu-info-item">
+                        <div class="cu-info-icon">📞</div>
+                        <div class="cu-info-text">
+                            <strong>Call Us Directly</strong>
+                            <a href="tel:+916359063984">+91 63590 63984</a>
+                        </div>
+                    </div>
+                    <div class="cu-info-item">
+                        <div class="cu-info-icon">✉️</div>
+                        <div class="cu-info-text">
+                            <strong>Email Us</strong>
+                            <a href="mailto:kalpeshjagdishbhai8@gmail.com">kalpeshjagdishbhai8@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="cu-info-item">
+                        <div class="cu-info-icon">🕒</div>
+                        <div class="cu-info-text">
+                            <strong>Business Hours</strong>
+                            Mon - Sat: 9:00 AM - 8:00 PM<br>
+                            Sunday: 9:00 AM - 1:00 PM
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cu-map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3671.865322965582!2d72.6517929753139!3d23.028022402618294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDAxJzQwLjkiTiA3MsKwMzknMTUuNyJF!5e0!3m2!1sen!2sin!4v1711617000000!5m2!1sen!2sin"
+                        frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cu-faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="cu-faq-grid">
+                <div class="cu-faq-item">
+                    <h3>🛠️ Do you offer custom welding and cutting?</h3>
+                    <p>Yes, we provide specialized services including precision circle cutting from scrap and custom
+                        welding techniques to fit your exact project requirements.</p>
+                </div>
+                <div class="cu-faq-item">
+                    <h3>🚚 Do you provide delivery?</h3>
+                    <p>We provide delivery across Ahmedabad and nearby regions. For bulk industrial orders, we can
+                        arrange transport pan-India. Contact us for shipping estimates.</p>
+                </div>
+                <div class="cu-faq-item">
+                    <h3>💳 What payment methods do you accept?</h3>
+                    <p>We accept Cash, Bank Transfers (NEFT/RTGS), UPI (Google Pay, PhonePe), and major Credit/Debit
+                        cards at our Odhav company.</p>
+                </div>
+                <div class="cu-faq-item">
+                    <h3>⚙️ Do you sell individual items or only bulk?</h3>
+                    <p>We cater to both wholesale and retail customers. Whether you need a single acrylic pillar or a
+                        bulk order of steel bearing balls, we are happy to assist.</p>
+                </div>
+            </div>
+
+            <div class="cu-social-links">
+                <h3>Connect With Us Online</h3>
+                <a href="#" class="cu-social-btn">📘 Facebook</a>
+                <a href="#" class="cu-social-btn">📸 Instagram</a>
+                <a href="https://wa.me/916359063984" class="cu-social-btn cu-social-wa">🟢 WhatsApp</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="cu-footer">
+        <div class="cu-footer-content">
+            <h2>Ashapura Steel</h2>
+            <p>Your trusted partner for premium metal and Hardware products.</p>
+            <div class="cu-footer-links">
+                <a href="index.html">🏠 Home</a> •
+                <a href="about.html">🏢 About Us</a> •
+                <a href="contactus.html">📞 Contact Us</a> •
+                <a href="https://wa.me/916359063984">💬 WhatsApp</a>
+            </div>
+            <p class="cu-copyright">© 2018-2026 Ashapura Steel ⚡ All Rights Reserved.</p>
+            <p class="cu-developer">Developed by Kalpesh Gelot</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/916359063984?text=Hello%20Ashapura%20Steel,%20I%20have%20an%20inquiry." target="_blank"
+        class="cu-wa-widget">
+        💬
+        <span class="cu-wa-tooltip">Chat with us!</span>
+    </a>
+
+</body>
+
+</html>

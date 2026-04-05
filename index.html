@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="google-site-verification" content="aJMxWfmfpecnUaHt9J3BvRkFE6cZUWMG9geEDK4HWYE" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Ashapura Steel - Premium Steel Products</title>
+  <link rel="icon" href="logo.png">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-wrap">
+      <div class="header-brand">
+        <img src="logo.png" alt="Logo"><span>Ashapura Steel</span>
+      </div>
+      <span class="mobile-menu-icon" id="mobileMenuBtn">☰</span>
+      <nav class="header-nav" id="navLinks">
+        <a class="nav-item" href="index.html">🏠 Home</a>
+        <a class="nav-item" href="about.html">🏢 About Us</a>
+        
+        
+        <a class="nav-item" href="contactus.html">📞 Contact Us</a>
+        <a class="nav-item" target="_blank" href="https://wa.me/916359063984">💬 WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-slider-wrap">
+      <div class="hero-slider-track" id="topSlider">
+
+        <div class="hero-slide">
+          <div class="hero-slide-content">
+            <span class="hero-tag">⭐ Premium Quality</span>
+            <h2>Acrylic Pillar</h2>
+            <p>High-precision acrylic pillar ultimate durability.</p>
+            <a href="tel:+916359063984" class="hero-btn">Enquire Now</a>
+          </div>
+          <div class="hero-slide-image"><img src="product/acrylic1.png" alt="Acrylic Pillar"></div>
+        </div>
+
+        <div class="hero-slide">
+          <div class="hero-slide-content">
+            <span class="hero-tag">⭐ Exclusive Design</span>
+            <h2>Colour Cotin Ball</h2>
+            <p>Enhance your interiors with our colour cotin ball.</p>
+            <a href="tel:+916359063984" class="hero-btn">Enquire Now</a>
+          </div>
+          <div class="hero-slide-image"><img src="product/colour ball.png" alt="Colour Ball"></div>
+        </div>
+
+        <div class="hero-slide">
+          <div class="hero-slide-content">
+            <span class="hero-tag">⭐ Premium Design</span>
+            <h2>Steel Trishul</h2>
+            <p>Premium quality all size trishul available.</p>
+            <a href="tel:+916359063984" class="hero-btn">Enquire Now</a>
+          </div>
+          <div class="hero-slide-image"><img src="product/trishul1.png" alt="Trishul"></div>
+        </div>
+
+      </div>
+      <button class="slider-arrow arrow-left" onclick="moveTopSlider(-1)">❮</button>
+      <button class="slider-arrow arrow-right" onclick="moveTopSlider(1)">❯</button>
+    </div>
+  </section>
+
+  <section class="search-category-section">
+
+    <div class="search-container">
+      <div class="search-box">
+        🔎 <input type="text" id="searchInput" placeholder="Search products...">
+        <div id="searchSuggestions" class="suggestions-list"></div>
+      </div>
+    </div>
+
+    <div class="category-buttons-container" id="categoryButtons">
+      <button class="cat-btn active" data-filter="All">All Categories</button>
+      <button class="cat-btn" data-filter="Steel Balls">Steel Balls</button>
+      <button class="cat-btn" data-filter="SS Gate Fitting">Gate Fitting</button>
+      <button class="cat-btn" data-filter="SS Pipe Fitting">Pipe Fitting</button>
+      <button class="cat-btn" data-filter="Steel Base">Steel Base</button>
+    </div>
+
+  </section>
+
+  <main class="product-main-area">
+    <div id="productGrid" class="product-grid">
+
+      <article class="prod-card" data-category="Steel Balls">
+        <img src="product/1.5inchball.png" alt="SS Ball" class="prod-image">
+        <div class="prod-details">
+          <span class="prod-category">Steel Balls</span>
+          <h3 class="prod-title">1.5X3/4 Balls</h3>
+          <p class="prod-price">₹ 10 / Piece</p>
+          <div class="prod-action">
+            <div class="prod-qty">
+              <label>Qty:</label> <input type="number" class="qty-input" value="1" min="1">
+            </div>
+            <button class="prod-cart-btn" onclick="addToCart(this)">🛒 Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="prod-card" data-category="SS Gate Fitting">
+        <img src="product/injis.png" alt="SS Injis" class="prod-image">
+        <div class="prod-details">
+          <span class="prod-category">SS Gate Fitting</span>
+          <h3 class="prod-title">SS All Size Injis</h3>
+          <p class="prod-price">₹ 200 / KGS</p>
+          <div class="prod-action">
+            <div class="prod-qty">
+              <label>Qty:</label> <input type="number" class="qty-input" value="1" min="1">
+            </div>
+            <button class="prod-cart-btn" onclick="addToCart(this)">🛒 Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="prod-card" data-category="SS Gate Fitting">
+        <img src="product/trishul.png" alt="SS Trishul" class="prod-image">
+        <div class="prod-details">
+          <span class="prod-category">SS Gate Fitting</span>
+          <h3 class="prod-title">SS All Size Trishul</h3>
+          <p class="prod-price">₹ 50 / Piece</p>
+          <div class="prod-action">
+            <div class="prod-qty">
+              <label>Qty:</label> <input type="number" class="qty-input" value="1" min="1">
+            </div>
+            <button class="prod-cart-btn" onclick="addToCart(this)">🛒 Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="prod-card" data-category="SS Gate Fitting">
+        <img src="product/bhala.png" alt="SS Bhala" class="prod-image">
+        <div class="prod-details">
+          <span class="prod-category">SS Gate Fitting</span>
+          <h3 class="prod-title">SS Bhala 5 Inch</h3>
+          <p class="prod-price">₹ 30 / Piece</p>
+          <div class="prod-action">
+            <div class="prod-qty">
+              <label>Qty:</label> <input type="number" class="qty-input" value="1" min="1">
+            </div>
+            <button class="prod-cart-btn" onclick="addToCart(this)">🛒 Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="prod-card" data-category="SS Pipe Fitting">
+        <img src="product/long band.png" alt="SS Elbow" class="prod-image">
+        <div class="prod-details">
+          <span class="prod-category">SS Pipe Fitting</span>
+          <h3 class="prod-title">SS All Size Elbow</h3>
+          <p class="prod-price">₹ 10 TO 80 / Piece</p>
+          <div class="prod-action">
+            <div class="prod-qty">
+              <label>Qty:</label> <input type="number" class="qty-input" value="1" min="1">
+            </div>
+            <button class="prod-cart-btn" onclick="addToCart(this)">🛒 Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="prod-card" data-category="Steel Base">
+        <img src="product/ball base.png" alt="SS Ball base" class="prod-image">
+        <div class="prod-details">
+          <span class="prod-category">Steel Base</span>
+          <h3 class="prod-title">SS Base 1 To 3 Inch</h3>
+          <p class="prod-price">₹ 2.5 TO 10 / Piece</p>
+          <div class="prod-action">
+            <div class="prod-qty">
+              <label>Qty:</label> <input type="number" class="qty-input" value="1" min="1">
+            </div>
+            <button class="prod-cart-btn" onclick="addToCart(this)">🛒 Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="prod-card" data-category="Steel Base">
+        <img src="product/1.5x1.5 thali.png" alt="SS Thali base" class="prod-image">
+        <div class="prod-details">
+          <span class="prod-category">Steel Base</span>
+          <h3 class="prod-title">SS 1.5X1.5 Thali base</h3>
+          <p class="prod-price">₹ 5 / Piece</p>
+          <div class="prod-action">
+            <div class="prod-qty">
+              <label>Qty:</label> <input type="number" class="qty-input" value="1" min="1">
+            </div>
+            <button class="prod-cart-btn" onclick="addToCart(this)">🛒 Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="prod-card" data-category="Steel Balls">
+        <img src="product/hollow ball.png" alt="SS Balls" class="prod-image">
+        <div class="prod-details">
+          <span class="prod-category">Steel Balls</span>
+          <h3 class="prod-title">SS Balls 40mm</h3>
+          <p class="prod-price">₹ 10 / Piece</p>
+          <div class="prod-action">
+            <div class="prod-qty">
+              <label>Qty:</label> <input type="number" class="qty-input" value="1" min="1">
+            </div>
+            <button class="prod-cart-btn" onclick="addToCart(this)">🛒 Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <section class="video-promo-section">
+      <div class="video-wrapper">
+        <video autoplay loop muted playsinline>
+          <source src="product/Ball .mp4" type="video/mp4">
+        </video>
+        <div class="video-content">
+          <h2>High-Grade Industrial Steel</h2>
+          <p>Manufacturing excellence delivered worldwide.</p>
+          <a href="contactus.html" class="video-contact-link">Contact Us Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-promo-section">
+
+      <div class="bottom-slider-wrap">
+        <div class="bottom-slider-track" id="bottomSlider">
+
+          <div class="bottom-slide">
+            <div class="bottom-slide-info">
+              <span class="bottom-tag">🔥 Best Seller</span>
+              <h2>Custom Railing</h2>
+            </div>
+            <div class="bottom-slide-pic"><img src="product/shortband 2.png" alt="Railing"></div>
+          </div>
+
+          <div class="bottom-slide">
+            <div class="bottom-slide-info">
+              <span class="bottom-tag">⚡ New Arrival</span>
+              <h2>Steel Pipe Flanges</h2>
+            </div>
+            <div class="bottom-slide-pic"><img src="product/rv.png" alt="Flanges"></div>
+          </div>
+
+          <div class="bottom-slide">
+            <div class="bottom-slide-info">
+              <span class="bottom-tag">💎 Premium</span>
+              <h2>Steel Pillar</h2>
+            </div>
+            <div class="bottom-slide-pic"><img src="product/pillar 1.png" alt="Pillar"></div>
+          </div>
+
+        </div>
+        <button class="bottom-arrow arrow-left" onclick="moveBottomSlider(-1)">❮</button>
+        <button class="bottom-arrow arrow-right" onclick="moveBottomSlider(1)">❯</button>
+      </div>
+
+      <div class="bottom-static-wrap">
+        <img src="product/injis1.png" alt="Featured Product">
+        <div class="bottom-static-tag">Special Offer</div>
+      </div>
+
+    </section>
+  </main>
+
+  <div class="show-more-container">
+    <a href="product.html" class="show-more-link">Show More Products</a>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <h2>Ashapura Steel</h2>
+      <p>Your trusted partner for premium metal and Hardware products.</p>
+      <div class="footer-nav">
+        <a href="index.html">🏠 Home</a> •
+        <a href="about.html">🏢 About Us</a> •
+        <a href="contactus.html">📞 Contact Us</a>
+      </div>
+      <div class="footer-socials">
+        <h3>Connect With Us</h3>
+        <a href="#" class="social-link">📘 Facebook</a> •
+        <a href="#" class="social-link">📸 Instagram</a> •
+        <a href="https://wa.me/916359063984" class="social-link">🟢 WhatsApp</a>
+      </div>
+      <p class="footer-rights">© 2026 Ashapura Steel ⚡ All Rights Reserved.</p>
+      <p class="footer-dev">Developed by Kalpesh Gelot</p>
+    </div>
+  </footer>
+
+  <div id="imageZoomModal" class="zoom-overlay">
+    <span class="close-zoom">×</span>
+    <img class="zoomed-pic" id="zoomedImageDisplay">
+  </div>
+
+  <div id="whatsappCartFloat" class="cart-floating-btn" onclick="sendOrderToWhatsApp()">
+    🛒 Send to WhatsApp (<span id="cartTotalItems">0</span>)
+  </div>
+
+</body>
+
+</html>
